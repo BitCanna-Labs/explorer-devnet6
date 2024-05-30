@@ -2,11 +2,8 @@
 
 
 <h1>Instructions for DEVNET-6</h1>
-Run:
-```bash
-docker run -p 8080:8080 bernalraul/pingexplorer-devnet6
-```
 
+Run: <code>docker run -p 8080:8080 bernalraul/pingexplorer-devnet6</code>
 
 ![Ping Wallet](./public/logo.svg)
 
