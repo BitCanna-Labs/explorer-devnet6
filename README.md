@@ -3,7 +3,9 @@
 
 <h1>Instructions for DEVNET-6</h1>
 
-Run: <code>docker run -p 8080:8080 bernalraul/pingexplorer-devnet6</code>
+Run: 
+Interactive: <code>docker run -p 8080:8080 bernalraul/pingexplorer-devnet6</code>
+Deteached: <code>docker run -d -p 8080:8080 bernalraul/pingexplorer-devnet6</code>
 
 ![Ping Wallet](./public/logo.svg)
 
