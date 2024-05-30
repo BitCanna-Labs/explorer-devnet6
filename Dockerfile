@@ -30,7 +30,6 @@ RUN yarn install
 ## Build the project
 RUN yarn build
 
-CMD yarn preview --host 0.0.0.0 --port 8080
 ################################################################################
 
 # Stage: runner
