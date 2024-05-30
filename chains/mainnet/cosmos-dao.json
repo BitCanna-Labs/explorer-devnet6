@@ -1,0 +1,19 @@
+{
+    "chain_name": "cosmosdao",
+    "coingecko": "bitcanna", 
+    "api": ["https://lcd-devnet.cosmos-dao.com/"], 
+    "rpc": ["https://rpc-devnet.cosmos-dao.com/"],
+    "snapshot_provider": "fb88f165477b7c7a4fbb47bb6b01448c732a0e883@devnet-6.bitcanna.io:26656",
+    "sdk_version": "0.50.5",
+    "coin_type": "118",
+    "min_tx_fee": "420",
+    "assets": [{
+        "base": "udao",
+        "symbol": "DAO",
+        "exponent": "6",
+        "coingecko_id": "bitcanna", 
+        "logo": "https://i.imgur.com/Li40CHL.png"
+    }],
+    "addr_prefix": "dao",
+    "logo": "https://i.imgur.com/Li40CHL.png"
+}

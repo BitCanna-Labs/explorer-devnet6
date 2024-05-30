@@ -1,15 +1,16 @@
 <div align="center">
 
-![Ping Wallet](./public/logo.svg)
 
-<h1>Ping Dashboard</h1>
-
-<h2>Instructions for DEVNET-6</h2>
+<h1>Instructions for DEVNET-6</h1>
 Run:
 ```bash
 docker run -p 8080:8080 bernalraul/pingexplorer-devnet6
 ```
 
+
+![Ping Wallet](./public/logo.svg)
+
+<h1>Ping Dashboard</h1>
 **Ping Dashboard is not only an explorer but also a wallet and more ... 🛠**
 
 [![version](https://img.shields.io/github/tag/ping-pub/explorer.svg)](https://github.com/ping-pub/explorer/releases/latest)
