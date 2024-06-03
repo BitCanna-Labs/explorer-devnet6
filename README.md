@@ -1,4 +1,4 @@
-<div align="center">
+
 
 
 <h1>Instructions for DEVNET-6</h1>
@@ -30,6 +30,8 @@ EOF
 
 sudo mv docker-explorer-devnet-6.service /lib/systemd/system/
 sudo systemctl enable docker-explorer-devnet-6.service && sudo systemctl start docker-explorer-devnet-6.service && sudo journalctl -fu docker-explorer-devnet-6 -o cat
+
+<div align="center">
 ![Ping Wallet](./public/logo.svg)
 
 <h1>Ping Dashboard</h1>
