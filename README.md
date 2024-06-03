@@ -15,8 +15,8 @@ After=docker.service
 
 [Service]
 Restart=always  
-ExecStart=/usr/bin/docker start -a nexus  
-ExecStop=/usr/bin/docker stop -t 2 nexus
+ExecStart=/usr/bin/docker start -a explorer-devnet-6  
+ExecStop=/usr/bin/docker stop -t 2 explorer-devnet-6
 
 [Install]
 WantedBy=default.target
