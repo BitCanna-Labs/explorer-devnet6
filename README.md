@@ -1,15 +1,12 @@
-
-
-
-<h1>Instructions for DEVNET-6</h1>
+# Instructions for DEVNET-6
 
 Run: 
-Interactive: <code>docker run --name explorer-devnet-6 -p 8080:8080 bernalraul/pingexplorer-devnet6</code>
-Deteached: <code>docker run --name explorer-devnet-6 -d -p 8080:8080 bernalraul/pingexplorer-devnet6</code>
+- Interactive: <code>docker run --name explorer-devnet-6 -p 8080:8080 bernalraul/pingexplorer-devnet6</code>
+- Deteached: <code>docker run --name explorer-devnet-6 -d -p 8080:8080 bernalraul/pingexplorer-devnet6</code>
 
 
-<h2>Create the systemd file:</h2>
-<code>
+## Create the systemd file:
+```bash
 cat <<'EOF' >>docker-explorer-devnet-6.service
 [Unit]
 Description=explorer-devnet-6 container  
@@ -24,12 +21,13 @@ ExecStop=/usr/bin/docker stop -t 2 nexus
 [Install]
 WantedBy=default.target
 EOF
-</code>
+```
 
-<h2>Move it, enable in the init and start it</h2>
-
+## Move it, enable in the init and start it
+```bash
 sudo mv docker-explorer-devnet-6.service /lib/systemd/system/
 sudo systemctl enable docker-explorer-devnet-6.service && sudo systemctl start docker-explorer-devnet-6.service && sudo journalctl -fu docker-explorer-devnet-6 -o cat
+```
 
 <div align="center">
 ![Ping Wallet](./public/logo.svg)
