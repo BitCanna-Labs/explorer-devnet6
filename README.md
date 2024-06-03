@@ -7,6 +7,29 @@ Run:
 Interactive: <code>docker run --name explorer-devnet-6 -p 8080:8080 bernalraul/pingexplorer-devnet6</code>
 Deteached: <code>docker run --name explorer-devnet-6 -d -p 8080:8080 bernalraul/pingexplorer-devnet6</code>
 
+
+<h2>Create the systemd file:</h2>
+
+cat <<'EOF' >>docker-explorer-devnet-6.service
+[Unit]
+Description=explorer-devnet-6 container  
+Requires=docker.service  
+After=docker.service
+
+[Service]
+Restart=always  
+ExecStart=/usr/bin/docker start -a nexus  
+ExecStop=/usr/bin/docker stop -t 2 nexus
+
+[Install]
+WantedBy=default.target
+EOF
+
+
+<h2>Move it, enable in the init and start it</h2>
+
+sudo mv docker-explorer-devnet-6.service /lib/systemd/system/
+sudo systemctl enable docker-explorer-devnet-6.service && sudo systemctl start docker-explorer-devnet-6.service && sudo journalctl -fu docker-explorer-devnet-6 -o cat
 ![Ping Wallet](./public/logo.svg)
 
 <h1>Ping Dashboard</h1>
