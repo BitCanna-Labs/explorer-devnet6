@@ -9,7 +9,7 @@ Deteached: <code>docker run --name explorer-devnet-6 -d -p 8080:8080 bernalraul/
 
 
 <h2>Create the systemd file:</h2>
-
+<code>
 cat <<'EOF' >>docker-explorer-devnet-6.service
 [Unit]
 Description=explorer-devnet-6 container  
@@ -24,7 +24,7 @@ ExecStop=/usr/bin/docker stop -t 2 nexus
 [Install]
 WantedBy=default.target
 EOF
-
+</code>
 
 <h2>Move it, enable in the init and start it</h2>
 
