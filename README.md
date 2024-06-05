@@ -7,6 +7,7 @@ Run:
 ## Re-create the docker files after changes (manually)
 After a new update, recreate the docker image and push to the Docker Hub using:
 - `docker buildx build --push --platform linux/amd64  --tag bernalraul/check_signings_balances:latest .`
+- Get the last update in the server: `docker pull bernalraul/check_signings_balances:latest`
 
 ## Create the systemd file:
 ```bash
