@@ -4,6 +4,9 @@ Run:
 - Interactive: <code>docker run --name explorer-devnet-6 -p 8080:8080 bernalraul/pingexplorer-devnet6</code>
 - Deteached: <code>docker run --name explorer-devnet-6 -d -p 8080:8080 bernalraul/pingexplorer-devnet6</code>
 
+## Re-create the docker files after changes (manually)
+After a new update, recreate the docker image and push to the Docker Hub using:
+- `docker buildx build --push --platform linux/amd64  --tag bernalraul/check_signings_balances:latest .`
 
 ## Create the systemd file:
 ```bash

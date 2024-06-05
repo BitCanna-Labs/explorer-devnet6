@@ -4,7 +4,7 @@
     "api": ["https://lcd-devnet-6.bitcanna.io/"], 
     "rpc": ["https://rpc-devnet-6.bitcanna.io"],
     "snapshot_provider": "fb88f165477b7c7a4fbb47bb6b01448c732a0e883@devnet-6.bitcanna.io:26656",
-    "sdk_version": "0.47.3",
+    "sdk_version": "0.50.6",
     "coin_type": "118",
     "min_tx_fee": "420",
     "assets": [{
