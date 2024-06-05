@@ -1,13 +1,16 @@
 # Instructions for DEVNET-6
 
 Run: 
-- Interactive: <code>docker run --name explorer-devnet-6 -p 8080:8080 bernalraul/pingexplorer-devnet6</code>
-- Deteached: <code>docker run --name explorer-devnet-6 -d -p 8080:8080 bernalraul/pingexplorer-devnet6</code>
+- Interactive: `docker run --name explorer-devnet-6 -p 8080:8080 bernalraul/pingexplorer-devnet6`
+- Deteached: `docker run --name explorer-devnet-6 -d -p 8080:8080 bernalraul/pingexplorer-devnet6`
 
 ## Re-create the docker files after changes (manually)
 After a new update, recreate the docker image and push to the Docker Hub using:
 - `docker buildx build --push --platform linux/arm64/v8,linux/amd64  --tag bernalraul/check_signings_balances:latest .`
-- Get the last update in the server: `docker pull bernalraul/pingexplorer-devnet6`
+- Get the last image from the Hub server: `docker pull bernalraul/pingexplorer-devnet6`
+- Stop and remove the container: `docker stop explorer-devnet-6 && docker rm -v explorer-devnet-6`
+- Re-create the container again with the new image: `docker run --name explorer-devnet-6 -d -p 8080:8080 bernalraul/pingexplorer-devnet6`
+
 
 ## Create the systemd file:
 ```bash
